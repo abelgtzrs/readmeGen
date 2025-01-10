@@ -2,6 +2,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # README File Generator
 
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Features](#features)
+- [Contributors](#contributors)
+- [Questions](#questions)
+
 ## Description
 A Node.js-based application that allows users to generate structured README.md files for their projects. Is uses the "Inquirer" package to collect input via the Command Terminal and outputs a formatted README.md file with the project's title in the file name.
 
