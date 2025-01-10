@@ -1,5 +1,5 @@
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # README File Generator
 
 ## Description
@@ -7,38 +7,21 @@ A Node.js-based application that allows users to generate structured README.md f
 
 ## Installation
 1. Clone the Repository
-```git clone https://github.com/abelgtzrs/readmeGen```
-
-2. Navigate to project directory.
-
-3. Install dependecies.
-```npm i```
 
 ## Usage
 1. Run the application
-```node index```
 
-2. Follow the prompts
-
-3. Check the 'examples' folder for the newly-generated README.md file
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contributing
-1. Fork the repository.
+1. Fork the repository
 
-2. Create a new branch for your feature.
-
-3. Commit your changes
-
-4. Push to your branch.
 ## Tests
 1. Run and provide mock inputs.
 
-2. Verify that the README.md file generated with the correct input.
 ## Features
 - Terminal command line prompts for user input.
-- Provides a list of Licenses and their corresponding badges.
 - Ability to add multiple features and contributors.
 - Dynamic structure for the README.md file
 - Saves file in 'examples' folder.
