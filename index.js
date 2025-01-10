@@ -82,6 +82,33 @@ function addContributors(contributors = []) {
   });
 }
 
+// Function to generate a license badge
+function getLicenseBadge(license) {
+  const badges = {
+    'MIT License': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+    'Apache License 2.0': '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+    'GNU General Public License v3.0': '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+    'BSD 2-Clause "Simplified" License': '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)',
+    'BSD 3-Clause "New" or "Revised" License': '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
+    'Boot Software License 1.0': '[![License](https://img.shields.io/badge/License-BSL_1.0-green.svg)](https://opensource.org/licenses/BSL-1.0)',
+    'None': '',
+  };
+  return badges[license] || '';
+}
+
+function getLicenseNotice(license) {
+  const notices = {
+    'MIT License': 'This project is licensed under the MIT License. See the LICENSE file for details.',
+    'Apache License 2.0': 'This project is licensed under the Apache License 2.0. See the LICENSE file for details.',
+    'GNU General Public License v3.0': 'This project is licensed under the GNU General Public License v3.0. See the LICENSE file for details.',
+    'BSD 2-Clause "Simplified" License': 'This project is licensed under the BSD 2-Clause License. See the LICENSE file for details.',
+    'BSD 3-Clause "New" or "Revised" License': 'This project is licensed under the BSD 3-Clause License. See the LICENSE file for details.',
+    'Boot Software License 1.0': 'This project is licensed under the Boost Software License 1.0. See the LICENSE file for details.',
+    'None': 'This project does not have a license.',
+  };
+  return notices[license] || '';
+}
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   const outputDir = path.join(process.cwd(), 'examples');
@@ -98,8 +125,13 @@ function writeToFile(fileName, data) {
   });
 }
 
+//Function that provides with a template for the README.md file and inputs the given data into corresponding sections 
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const licenseBadge = getLicenseBadge(data.license);
+  const licenseNotice = getLicenseNotice(data.license);
+  return `
+  ${licenseBadge}
+# ${data.title}
 
 ## Description
 ${data.description}
@@ -111,7 +143,7 @@ ${data.installation}
 ${data.usage}
 
 ## License
-${data.license}
+${licenseNotice}
 
 ## Contributing
 ${data.contributing}
