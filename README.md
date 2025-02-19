@@ -54,6 +54,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - Dynamic structure for the README.md file
 - Saves file in 'examples' folder.
 
+## Video Walkthrough
+https://drive.google.com/file/d/1Mz4NxJy4nspw7X8sI0AtD2EyUETn0V7G
+
 ## Contributors
 - Abel Gutierrez
 
